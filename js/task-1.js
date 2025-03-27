@@ -1,8 +1,11 @@
-const names = students
-  .toSorted((a, b) => a.score - b.score)
-  .map(student => student.name);
+const user = {
+  username: "Poly",
+  showThis() {
+    console.log(this);
+  }
+};
 
-console.log(names); // ["Ajax", "Poly", "Mango", "Kiwi"]
+user.showThis(); // {username: "Poly", showThis: ƒ}
 
 
 /*
