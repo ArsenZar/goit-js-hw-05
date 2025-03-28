@@ -1,11 +1,15 @@
+function sayHello(greeting) {
+  console.log(`${greeting}, ${this.name}!`);
+}
+
 const user = {
-  username: "Poly",
-  showThis() {
-    console.log(this);
-  }
+  name: "Alice"
 };
 
-user.showThis(); // {username: "Poly", showThis: ƒ}
+const greet = sayHello.bind(user);
+
+greet("Hello");
+
 
 
 /*
